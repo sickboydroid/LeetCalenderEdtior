@@ -1,0 +1,120 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.app-header {
+  width: 100%;
+  max-width: 900px;
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.title-area {
+  display: flex;
+  align-items: center;
+}
+
+.header-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.app-header h1 {
+  margin: 0;
+  color: var(--accent);
+  font-size: 1.5rem;
+  letter-spacing: -0.5px;
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 16px;
+}
+
+.controls-bar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 900px;
+  flex-wrap: wrap;
+  gap: 16px;
+  background-color: var(--bg-panel);
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.controls-group {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+button.icon-btn {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-muted);
+}
+
+button.icon-btn:hover:not(:disabled) {
+  color: var(--text-main);
+  background: var(--bg-hover);
+  border-color: var(--border-color);
+}
+
+button.text-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  padding: 4px 8px;
+}
+
+button.text-btn:hover {
+  color: var(--text-main);
+  background: transparent;
+  text-decoration: underline;
+  border: none;
+}
+
+button.primary-text {
+  color: var(--accent-orange);
+  font-weight: 600;
+  border: 1px solid var(--accent-orange);
+  border-radius: 4px;
+  padding: 4px 12px;
+  background-color: rgba(217, 119, 6, 0.1);
+}
+
+button.primary-text:hover {
+  color: #fff;
+  background-color: var(--accent-orange);
+  text-decoration: none;
+}
+
+.app-footer {
+  margin-top: 48px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
