@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="public/icon-big.png" alt="LeetCalenderEditor Logo" width="128" />
+</p>
+
 # LeetCalenderEditor
 
 A specialized, completely offline web tool to plan and design custom visual patterns for your LeetCode/GitHub contribution graph. 
