@@ -1,25 +1,27 @@
 # LeetCalenderEditor
 
-A frontend web application to plan, draw, and save customized patterns for your LeetCode (or GitHub) contribution graph.
+A specialized, completely offline web tool to plan and design custom visual patterns for your LeetCode/GitHub contribution graph. 
+
+The application perfectly replicates the exact Month-blocked calendar layout that LeetCode uses, ensuring that any pattern you draw corresponds exactly to the 1-year contribution history grid on your profile.
 
 ## Features
 
-- **Exact Grid Alignment**: The grid mirrors LeetCode's exact layout, padding months based on actual weekdays, ensuring your pattern maps 1:1 with your real profile.
-- **Draw to Paint**: Click and drag across cells to easily toggle dates on and off.
-- **Google Calendar Integration**: Instantly export an `.ics` file that automatically sets morning (10:00 AM) and night (10:00 PM) reminders in your Google Calendar for the days you need to submit.
-- **Persistent Local Storage**: Your masterpiece is saved securely in your browser when you click "Save Pattern".
-- **Undo / Redo System**: Full history stack mapped to global keyboard shortcuts (`Ctrl+Z`, `Ctrl+Y`).
-- **Offline First**: Entirely client-side with no backend.
-- **Import / Export JSON**: Back up your raw pattern data as JSON.
+- **Pixel-Perfect LeetCode Grid**: Accurately simulates the gapped, month-blocked view with identical day-of-week paddings.
+- **Save Patterns**: Keep your master plan securely saved in your browser's Local Storage.
+- **Export / Import**: Back up your designs or transfer them between devices using JSON export.
+- **Google Calendar Integration**: Instantly generate an `.ics` file from your saved plan. Adds morning (10:00 AM) and night (10:00 PM) reminders to your calendar for every single day you need to submit.
+- **Next Submission Tracking**: View exactly when your next planned submission is due right in the UI.
+- **Keyboard Shortcuts**: Quickly `Undo` (Ctrl+Z) and `Redo` (Ctrl+Y) your sketching strokes.
 
-## How to Run Locally
+## Development
 
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
-2. Start the Vite development server:
-   ```bash
-   npm run dev
-   ```
-3. Open `http://localhost:5173` in your browser.
+This project was bootstrapped with [Vite](https://vitejs.dev/) and React.
+
+### Running Locally
+
+```bash
+npm install
+npm run dev
+```
+
+Open `http://localhost:5173` in your browser. All processing is fully local and offline.
