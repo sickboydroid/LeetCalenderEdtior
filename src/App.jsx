@@ -64,15 +64,11 @@ function App() {
     <div className="app-container">
       <header className="app-header">
         <div className="header-top">
-          <div className="title-area">
-            <h1>LeetCalenderEditor</h1>
-            <Tracker burnedDates={burnedDates} />
-          </div>
+          <h1>LeetCalenderEditor</h1>
           <div className="header-actions">
-            <button className="text-btn" onClick={exportICS}>Export ICS</button>
             <button className="text-btn" onClick={exportData}>Export JSON</button>
+            <button className="text-btn" onClick={exportICS}>Export ICS (for calendar)</button>
             <button className="text-btn" onClick={handleImportClick}>Import JSON</button>
-            <button className="text-btn primary-text" onClick={handleSave}>Save Pattern</button>
             <input 
               type="file" 
               accept=".json" 
@@ -82,14 +78,14 @@ function App() {
             />
           </div>
         </div>
+        <p>Design your contribution graph pattern and stay on track.</p>
       </header>
 
       <main className="app-main">
         <div className="controls-bar">
           <div className="controls-group">
-            <button className="icon-btn" onClick={() => { setActiveDates(new Set(burnedDates)); setTimeout(endSwipe, 0); }} title="Revert to Saved">
-               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
-            </button>
+            <button className="primary" onClick={handleSave}>Save Pattern</button>
+            <button onClick={() => { setActiveDates(new Set(burnedDates)); setTimeout(endSwipe, 0); }}>Revert</button>
           </div>
           
           <div className="controls-group">
@@ -108,6 +104,8 @@ function App() {
           toggleDate={toggleDate} 
           endSwipe={endSwipe}
         />
+
+        <Tracker burnedDates={burnedDates} />
       </main>
       
       <footer className="app-footer">
