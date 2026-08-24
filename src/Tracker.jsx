@@ -17,11 +17,17 @@ export function Tracker({ burnedDates }) {
   }
 
   if (!nextDate) {
-    return <span className="tracker-inline empty">No planned submissions</span>;
+    return (
+      <div className="tracker-panel">
+        <h3 className="tracker-title">Next Planned Submission</h3>
+        <p className="tracker-none">No upcoming submissions in your burned plan.</p>
+      </div>
+    );
   }
 
   const isToday = nextDate === todayStr;
   
+  // Need to parse date without timezone shifting issues
   const [y, m, d] = nextDate.split('-');
   const nextDateObj = new Date(y, m - 1, d);
   
@@ -38,12 +44,20 @@ export function Tracker({ burnedDates }) {
   }
 
   const formattedDate = nextDateObj.toLocaleDateString(undefined, {
-    month: 'short', day: 'numeric'
+    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
   });
 
   return (
-    <span className={`tracker-inline ${isToday ? 'urgent' : ''}`}>
-      Next submission: <strong>{formattedDate}</strong> ({relativeText})
-    </span>
+    <div className="tracker-panel">
+      <h3 className="tracker-title">Next Planned Submission</h3>
+      <div className="tracker-content">
+        <div className={`tracker-date ${isToday ? 'urgent' : ''}`}>
+          {formattedDate}
+        </div>
+        <div className={`tracker-relative ${isToday ? 'urgent-text' : ''}`}>
+          {relativeText}
+        </div>
+      </div>
+    </div>
   );
 }
