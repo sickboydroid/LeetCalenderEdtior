@@ -1,0 +1,32 @@
+.tracker-inline {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  background-color: var(--bg-panel);
+  padding: 4px 10px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  margin-left: 12px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.tracker-inline strong {
+  color: var(--text-main);
+  margin: 0 4px;
+}
+
+.tracker-inline.urgent {
+  color: var(--accent);
+  border-color: var(--accent);
+  background-color: rgba(44, 187, 93, 0.1);
+}
+
+.tracker-inline.urgent strong {
+  color: var(--accent);
+}
+
+.tracker-inline.empty {
+  font-style: italic;
+  background-color: transparent;
+  border-color: transparent;
+}
