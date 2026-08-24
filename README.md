@@ -4,7 +4,7 @@ A specialized, completely offline web tool to plan and design custom visual patt
 
 The application perfectly replicates the exact Month-blocked calendar layout that LeetCode uses, ensuring that any pattern you draw corresponds exactly to the 1-year contribution history grid on your profile.
 
-🚀 **Live Demo:** [https://sickboydroid.github.io/LeetCalenderEdtior/](https://sickboydroid.github.io/LeetCalenderEdtior/)
+**Live Link:** [https://sickboydroid.github.io/LeetCalenderEdtior/](https://sickboydroid.github.io/LeetCalenderEdtior/)
 
 ## Features
 
